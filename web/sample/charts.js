@@ -23,7 +23,10 @@ $(function () {
             pointInterval: 24 * 60 * 60 * 1000, // 1 day
             pointStart: Date.now() - (24 * 60 * 60 * 1000 * 30), // 30 days ago
             data:  [5,9,6,20,23,15,8,7,35,30,40,34,27,23,13,50,44,34,36,30,28,26,20,37,43,52,55,60,66,55]
-        }]
+        }],
+        credits: {
+            enabled: false
+        }
     });
 
     $('#browserChart').highcharts({
@@ -50,7 +53,10 @@ $(function () {
                 ['Opera',     3],
                 ['Others',   2]
             ]
-        }]
+        }],
+        credits: {
+            enabled: false
+        }
     });
 
     $('#topPagesChart').highcharts({
