@@ -1,0 +1,9 @@
+$(function () {
+
+    // create charts here ...
+
+});
+
+
+
+
