@@ -2,7 +2,7 @@ $(function () {
 
     $('#browserChart').highcharts({
         title: {
-            text: 'Page Hits with different browsers'
+            text: ''
         },
         series: [{
             type: 'pie',
