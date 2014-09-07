@@ -332,7 +332,7 @@ $(function () {
         },
 
         series : [{
-            data : mapData,
+            data : getMapData(),
             mapData: Highcharts.maps['custom/world'],
             joinBy: ['iso-a2', 'code'],
             name: 'Page Hits',
