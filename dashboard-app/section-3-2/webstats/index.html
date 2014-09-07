@@ -10,6 +10,7 @@
     <link href="../../common/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <!-- Ionicons -->
     <link href="../../common/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../common/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
     <!-- Theme style -->
     <link href="../../common/css/AdminLTE.css" rel="stylesheet" type="text/css"/>
 
@@ -125,10 +126,38 @@
 
             <div class="row">
 
+                <div class="col-md-12">
+
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">Pick a Date Range to display in the charts</h3>
+                        </div>
+                        <div class="box-body">
+                            <!-- Date range -->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="dateRange">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                            <button class="btn btn-primary" id="refreshButton">Refresh Charts</button>
+                            <!-- /.form group -->
+
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
                 <div class="col-md-6">
                     <div class="box box-solid box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">Page Hits over Time (click to drill down)</h3>
+                            <h3 class="box-title">Page Hits over Time</h3>
 
                             <div class="box-tools pull-right">
                                 <button class="btn btn-primary btn-sm" data-widget="collapse">
@@ -210,6 +239,8 @@
 <script src="mapData.js"></script>
 <script src="charts.js"></script>
 <script src="linechart.js"></script>
+<script src="refreshCharts.js"></script>
+<script src="../../common/js/plugins/daterangepicker/daterangepicker.js"></script>
 
 </body>
 </html>
