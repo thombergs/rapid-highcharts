@@ -20,7 +20,7 @@ $(function () {
 
             rangeSelector : {
                 selected : 1,
-                inputEnabled: $('#container').width() > 480
+                inputEnabled: $('#googleStockchart').width() > 480
             },
 
             navigator: {
@@ -43,7 +43,7 @@ $(function () {
 
             rangeSelector : {
                 selected : 1,
-                inputEnabled: $('#container').width() > 480
+                inputEnabled: $('#facebookStockchart').width() > 480
             },
 
             navigator: {
