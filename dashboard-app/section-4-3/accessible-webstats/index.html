@@ -24,7 +24,13 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
     <!-- Highcharts Javascript dependencies -->
-    <script src="../../common/js/highcharts/highstock.js"></script>
+    <script src="../../common/js/highcharts/highcharts.js"></script>
+    <script src="../../common/js/highcharts/data.js"/>
+    <script src="../../common/js/highcharts/exporting.js"></script>
+    <script src="../../common/js/highcharts/heatmap.js"></script>
+    <script src="../../common/js/highcharts/map.js"></script>
+    <script src="../../common/js/highcharts/mapdata/custom/world.js"></script>
+    <script src="../../common/js/highcharts/drilldown.js"></script>
 
 
 </head>
@@ -74,12 +80,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../accessible-webstats/index.html">
+                    <a href="index.html">
                         <i class="fa fa-bar-chart-o"></i> <span>Accessible Web Statistics</span>
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="../stocks/index.html">
                         <i class="fa fa-dollar"></i> <span>My Stocks</span>
                     </a>
                 </li>
@@ -111,12 +117,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                My Stocks
+                Accessible Web Statistics
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">
-                    My Stocks
+                    Accessible Web Statistics
                 </li>
             </ol>
         </section>
@@ -129,7 +135,7 @@
                 <div class="col-md-12">
                     <div class="box box-solid box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">Google Stocks</h3>
+                            <h3 class="box-title">Page Hits over Time (table view)</h3>
 
                             <div class="box-tools pull-right">
                                 <button class="btn btn-primary btn-sm" data-widget="collapse">
@@ -137,7 +143,76 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="box-body" id="googleStockchart">
+                        <div class="box-body">
+                            <table id="pageHitsTable" class="table">
+                                <caption>Page Hits for each day in the last week.</caption>
+                                <tbody>
+                                    <tr>
+                                        <th></th>
+                                        <th scope="col">/logout</th>
+                                        <th scope="col">/login</th>
+                                        <th scope="col">/news</th>
+                                        <th scope="col">/register</th>
+                                        <th scope="col">/home</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Monday</th>
+                                        <td>15</td>
+                                        <td>20</td>
+                                        <td>19</td>
+                                        <td>29</td>
+                                        <td>39</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tuesday</th>
+                                        <td>35</td>
+                                        <td>40</td>
+                                        <td>15</td>
+                                        <td>1</td>
+                                        <td>53</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Wednesday</th>
+                                        <td>5</td>
+                                        <td>3</td>
+                                        <td>5</td>
+                                        <td>9</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Thursday</th>
+                                        <td>34</td>
+                                        <td>15</td>
+                                        <td>26</td>
+                                        <td>16</td>
+                                        <td>18</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Friday</th>
+                                        <td>56</td>
+                                        <td>25</td>
+                                        <td>37</td>
+                                        <td>64</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Saturday</th>
+                                        <td>35</td>
+                                        <td>25</td>
+                                        <td>37</td>
+                                        <td>32</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Sunday</th>
+                                        <td>56</td>
+                                        <td>35</td>
+                                        <td>25</td>
+                                        <td>64</td>
+                                        <td>32</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -149,7 +224,7 @@
                 <div class="col-md-12">
                     <div class="box box-solid box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">Facebook Stocks</h3>
+                            <h3 class="box-title">Page Hits over Time (chart view)</h3>
 
                             <div class="box-tools pull-right">
                                 <button class="btn btn-primary btn-sm" data-widget="collapse">
@@ -157,16 +232,13 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="box-body" id="facebookStockchart">
+                        <div class="box-body" id="pageHitsChart">
                         </div>
                     </div>
                 </div>
 
             </div>
-
-
         </section>
-
         <!-- /.content -->
     </aside>
     <!-- /.right-side -->
@@ -179,7 +251,7 @@
 <!-- AdminLTE App -->
 <script src="../../common/js/AdminLTE/app.js" type="text/javascript"></script>
 
-<script src="stockCharts.js"></script>
+<script src="charts.js"></script>
 
 </body>
 </html>
