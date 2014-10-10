@@ -16,10 +16,6 @@ $(function () {
 
     $('#pageHitsChart').highcharts({
 
-        data: {
-            table: 'pageHitsTable'
-        },
-
         chart: {
             type: 'spline'
         },

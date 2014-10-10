@@ -14,7 +14,7 @@ $(function () {
 
     Highcharts.setOptions(theme);
 
-    $.get('http://www.google.com/finance/historical?output=csv&q=NASDAQ:GOOGL', function (csvFile) {
+    $.get('googl.csv', function (csvFile) {
         var data = parseCSVData(csvFile);
 
         // Create the chart
@@ -41,7 +41,7 @@ $(function () {
         });
     });
 
-    $.get('http://www.google.com/finance/historical?output=csv&q=NASDAQ:FB', function (csvFile) {
+    $.get('fb.csv', function (csvFile) {
         var data = parseCSVData(csvFile);
 
         // Create the chart
@@ -73,6 +73,8 @@ $(function () {
 function parseCSVData(csvFile) {
 
 }
+
+
 
 
 
