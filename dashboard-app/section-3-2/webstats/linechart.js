@@ -41,6 +41,7 @@ $(function () {
         },
         series: [
             {
+                id: 'mainSeries',
                 pointInterval: 24 * 60 * 60 * 1000,
                 pointStart: Date.now() - 29 * 24 * 60 * 60 * 1000,
                 name: 'Page Hits',
